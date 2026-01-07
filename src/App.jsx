@@ -1,11 +1,19 @@
 import React from 'react'
-import Home from './Components/Home'
+import Header from './Components/Layout/Header/Header'
+import Hero from './Sections/Hero/Hero'
 
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+      <header>
+        <Header />
+      </header>
+      <body>
+        <main>
+          <Hero />
+        </main>
+      </body>
+    </>
   )
 }
 

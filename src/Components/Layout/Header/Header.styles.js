@@ -21,7 +21,7 @@ export const Nav = styled.nav`
 `;
 export const List = styled.ul`
     display:flex;
-    gap:4rem;
+    gap:2rem;
     padding: 3px;
     list-style: none;
 

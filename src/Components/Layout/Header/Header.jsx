@@ -25,9 +25,9 @@ const Header = () => {
                 </List>
             </Nav>
             <Hamburger onClick={() => setOpen(!open)}>
-                {open ? <FaTimes size={20} /> : <FaBars size={20} />}
+                {open ? <FaTimes size={22} /> : <FaBars size={22} />}
             </Hamburger>
-            <Button>Sign In</Button>
+            <Button>Join Us</Button>
         </Navbar>
     )
 }
