@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from './Components/Layout/Header/Header'
-import Hero from './Sections/Hero/Hero'
+import Header from './Components/Layout/Header/Header';
+import Hero from './Sections/Hero/Hero';
+import Trending from "./Sections/Trending/Trending";
 
 const App = () => {
   return (
@@ -8,11 +9,10 @@ const App = () => {
       <header>
         <Header />
       </header>
-      <body>
-        <main>
-          <Hero />
-        </main>
-      </body>
+      <main>
+        <Hero />
+        <Trending />
+      </main>
     </>
   )
 }

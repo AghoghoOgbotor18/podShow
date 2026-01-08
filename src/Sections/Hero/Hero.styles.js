@@ -75,6 +75,7 @@ export const Container = styled.div`
     width: 65%;
     transform: translateX(29%); 
     text-align: center;
+    box-shadow: 1px 1px 10px 0.1px #e6d7d7ff;
 
     @media ${devices.tablet}{
         bottom: -5%;
