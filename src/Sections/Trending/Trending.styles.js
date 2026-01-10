@@ -45,7 +45,7 @@ export const SectionTitle = styled.h1`
     margin-bottom: 15px;
 `;
 export const TrendImage = styled.img`
-    border-radius: 10p vx;
+    border-radius: 10px;
     width: 100%;
     height: 200px;
     object-fit:cover;
