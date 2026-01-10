@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
 export const AboutSection = styled.section`
-    padding: 2rem;
+    padding: 1.5rem;
     margin: 5rem 0;
 `;
 export const Content = styled.div`
