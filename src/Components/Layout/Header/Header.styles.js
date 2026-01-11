@@ -10,6 +10,8 @@ export const Navbar = styled.header`
     width: 100%;
     background: white;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
 `;
 export const Logo = styled.h1`
     font-family: "Dancing Script", cursive;
