@@ -5,6 +5,7 @@ import Trending from "./Sections/Trending/Trending";
 import About from "./Sections/About/About";
 import Speakers from './Sections/Speakers/Speakers';
 import CTASection from './Sections/CTASection/CTASection';
+import WhyChooseUs from './Sections/WhyChooseUs/WhyChooseUs';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <About />
         <Speakers />
         <CTASection />
+        <WhyChooseUs />
       </main>
     </>
   )
