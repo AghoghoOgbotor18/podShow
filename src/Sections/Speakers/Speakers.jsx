@@ -4,7 +4,7 @@ import secondSpeaker from "../../assets/Images/speaker2.jpg";
 import thirdSpeaker from "../../assets/Images/speaker3.jpg";
 import fourthSpeaker from "../../assets/Images/speaker4.jpg";
 import { Card, SpeakerSection, Title, Content, Image, Grid, Group, Centered, Scale } from './Speakers.styles';
-import { Features, Subtitle, Text } from '../About/About.styles';
+import { Subtitle, Text } from '../About/About.styles';
 import { CTAButton } from '../../Components/Common/Button/Button.styles';
 
 const Speakers = () => {

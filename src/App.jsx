@@ -4,6 +4,7 @@ import Hero from './Sections/Hero/Hero';
 import Trending from "./Sections/Trending/Trending";
 import About from "./Sections/About/About";
 import Speakers from './Sections/Speakers/Speakers';
+import CTASection from './Sections/CTASection/CTASection';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Trending />
         <About />
         <Speakers />
+        <CTASection />
       </main>
     </>
   )
