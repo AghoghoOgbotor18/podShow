@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
 export const Section = styled.section`
-    background-color: #121212;
     color: #fff;
-    border-radius: 10px;
     padding: 15px 20px;
     margin: 5rem auto;
     max-width: 1100px;
@@ -16,6 +14,9 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     gap: 3rem;
+    background-color: #121212;
+    border-radius: 10px;
+    padding: 15px 20px;
     
     @media ${devices.mobile} {
         flex-direction: column;
