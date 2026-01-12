@@ -31,7 +31,7 @@ export const Title = styled.h4`
 `;
 export const Image = styled.img`
     width: 100%;
-    height: 250px;
+    height:300px;
     border-radius: 10px;
     transition: 1s;
 
@@ -40,7 +40,7 @@ export const Image = styled.img`
     }
 
     @media ${devices.mobile} {
-        height: 300px;
+        max-height: 400px;
     }
 `;
 export const Scale = styled.div`
