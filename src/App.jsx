@@ -6,6 +6,7 @@ import About from "./Sections/About/About";
 import Speakers from './Sections/Speakers/Speakers';
 import CTASection from './Sections/CTASection/CTASection';
 import WhyChooseUs from './Sections/WhyChooseUs/WhyChooseUs';
+import Testimonials from './Sections/Testimonials/Testimonials';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Speakers />
         <CTASection />
         <WhyChooseUs />
+        <Testimonials />
       </main>
     </>
   )

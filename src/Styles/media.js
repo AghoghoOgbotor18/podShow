@@ -1,5 +1,5 @@
 export const devices = {
-    mobile: "(max-width: 600px)",
-    tablet: "(max-width: 900px)",
+    mobile: "(max-width: 768px)",
+    tablet: "(max-width: 1024px)",
     desktop: "(max-width: 1024px)"
 }
