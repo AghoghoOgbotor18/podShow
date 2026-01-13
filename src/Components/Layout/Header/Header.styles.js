@@ -10,7 +10,7 @@ export const Navbar = styled.header`
     width: 100%;
     background: white;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
 
 `;
 export const Logo = styled.h1`
@@ -44,7 +44,7 @@ export const List = styled.ul`
     }
 `;
 export const Lists = styled.li`
-    font-size: 18px;
+    font-size: 16px;
     padding: 3px;
 `;
 export const Link = styled.a`
@@ -64,7 +64,7 @@ export const Button = styled.button`
     border-radius: 5px;
     padding: 10px 20px;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 
     &:hover{

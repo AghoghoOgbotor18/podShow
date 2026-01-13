@@ -4,6 +4,7 @@ import {FaBars, FaTimes} from "react-icons/fa"
 
 const Header = () => {
     const [open, setOpen] = useState(false);
+    
     return (
         <Navbar>
             <Logo>PodShow</Logo>
@@ -14,10 +15,16 @@ const Header = () => {
                         <Link>Home</Link>
                     </Lists>
                     <Lists>
-                        <Link>About</Link>
+                        <Link>About Us</Link>
                     </Lists>
                     <Lists>
-                        <Link>Features</Link>
+                        <Link>Episodes</Link>
+                    </Lists>
+                    <Lists>
+                        <Link>Trending</Link>
+                    </Lists>
+                    <Lists>
+                        <Link>Testimonials</Link>
                     </Lists>
                     <Lists>
                         <Link>Contact</Link>
