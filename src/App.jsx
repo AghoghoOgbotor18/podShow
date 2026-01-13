@@ -8,6 +8,7 @@ import CTASection from './Sections/CTASection/CTASection';
 import WhyChooseUs from './Sections/WhyChooseUs/WhyChooseUs';
 import Testimonials from './Sections/Testimonials/Testimonials';
 import Contact from './Sections/Contact/Contact';
+import Footer from './Components/Layout/Footer/Footer';
 
 const App = () => {
   const [input, setInput] = useState("");
@@ -26,6 +27,9 @@ const App = () => {
         <Testimonials />
         <Contact />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }
