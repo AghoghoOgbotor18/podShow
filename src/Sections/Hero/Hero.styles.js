@@ -12,7 +12,7 @@ export const HeroWrapper = styled.section`
     align-items:center;
     position: relative;
     color: #ffffff;
-    margin-top: 15px;
+    padding-top: 15px;
 
     &::before{
         content: "";

@@ -4,19 +4,22 @@ export const Navbar = styled.header`
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    padding: 8px 15px;
     position: fixed;
     top: 0;
     width: 100%;
-    background: white;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
 `;
 export const Logo = styled.h1`
     font-family: "Dancing Script", cursive;
     font-size: 2.2rem;
     font-weight: 1000;
+    color: #fff;
 `;
 export const Nav = styled.nav`
     padding: 5px;
@@ -49,7 +52,7 @@ export const Lists = styled.li`
 `;
 export const Link = styled.a`
   text-decoration: none;
-  color: #000;
+  color: #fff;
   cursor: pointer;
 
   @media ${devices.tablet} {
@@ -59,8 +62,8 @@ export const Link = styled.a`
 `;
 
 export const Button = styled.button`
-    background-color: #121212;
-    color: #fff;
+    background-color: #fff;
+    color: #121212;
     border-radius: 5px;
     padding: 10px 20px;
     border: none;
@@ -68,7 +71,7 @@ export const Button = styled.button`
     cursor: pointer;
 
     &:hover{
-        background-color: #161616ff;
+        background-color: #f2f2f2;
     }
     
     @media ${devices.tablet}{
