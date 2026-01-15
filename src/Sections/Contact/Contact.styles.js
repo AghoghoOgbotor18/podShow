@@ -3,8 +3,10 @@ import { devices } from "../../Styles/media";
 
 export const ContactSection = styled.section`
     background: #f4f4f4;
+    padding-top: 30px;
     color: #000;
     padding: 1.5rem;
+
 `;
 export const Form = styled.form`
     display:flex;
@@ -44,19 +46,18 @@ export const Inputs = styled.div`
     gap: 3px;
 `;
 export const Image = styled.img`
-    width:80%;
-    height: 100%;
-    max-height: 40%;
+    width:100%;
+    height: 500px;
     border-radius: 10px;
 
     @media ${devices.mobile} {
-        width: 100%;
-        height: 500px;
+        
+        height: 600px;
     }
     
     @media ${devices.tablet} {
-        width: 80%;
-        height: 500px;
+        width: 100%;
+        height: 600px;
     }
 `;
 export const Info = styled.div`

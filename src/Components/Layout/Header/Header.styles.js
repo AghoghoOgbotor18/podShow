@@ -32,7 +32,7 @@ export const List = styled.ul`
 
     @media ${devices.tablet}{
        position: fixed;
-        top: 60px;
+        top: 50px;
         left: 0;
         width: 100%;
         height: 100vh;
@@ -82,6 +82,7 @@ export const Hamburger = styled.div`
     display: none;
     cursor: pointer;
     z-index: 1001;
+    color: #fff;
 
     @media ${devices.tablet} {
         display: block;
