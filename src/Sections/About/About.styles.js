@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
+import { motion } from "framer-motion";
 export const AboutSection = styled.section`
     padding: 1.5rem;
     margin: 5rem 0;
+    overflow-x: hidden;
 `;
-export const Content = styled.div`
+export const Content = styled(motion.div)`
     display: flex;
     justify-content: center;
     gap: 4rem;
@@ -16,37 +18,37 @@ export const Content = styled.div`
 export const Title = styled.h3`
     color: #111
 `;
-export const AboutUs = styled.div`
+export const AboutUs = styled(motion.div)`
     display:flex;
     flex-direction: column;
     gap:10px;
 `;
-export const Subtitle = styled.h2`
+export const Subtitle = styled(motion.h2)`
     font-weight: 600;
     text-transform: uppercase;
 `;
-export const Text = styled.p`
+export const Text = styled(motion.p)`
     font-size: 15px;
 `;
-export const Brands = styled.div`
+export const Brands = styled(motion.div)`
     display:flex;
     align-items:center;
     gap: 7px;
     font-weight: 600;
 `;
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 `;
-export const Image = styled.img`
+export const Image = styled(motion.img)`
     width:100%;
     min-width:300px;
     height:auto;
     object-fit: cover;
     border-radius: 10px;
 `;
-export const Features = styled.div`
+export const Features = styled(motion.div)`
     display: flex;
     justify-content: center;
     gap:2rem;
@@ -62,12 +64,12 @@ export const Active = styled.div`
     padding: 10px;
     color: #fff;
 `;
-export const Followers = styled.div`
+export const Followers = styled(motion.div)`
     display:flex;
     flex-direction: column;
     gap; 2px;
 `;
-export const Passports = styled.img`
+export const Passports = styled(motion.img)`
     width: 30px;
     height: 30px;
     border-radius: 50%;

@@ -12,22 +12,19 @@ const Header = () => {
             <Nav>
                 <List open={open}>
                     <Lists>
-                        <Link>Home</Link>
+                        <Link href="#home" onClick={() => setOpen(!open)}>Home</Link>
                     </Lists>
                     <Lists>
-                        <Link>About Us</Link>
+                        <Link href="#about" onClick={() => setOpen(!open)}>About Us</Link>
                     </Lists>
                     <Lists>
-                        <Link>Episodes</Link>
+                        <Link href="#trending" onClick={() => setOpen(!open)}>Trending</Link>
                     </Lists>
                     <Lists>
-                        <Link>Trending</Link>
+                        <Link href="#testimonials" onClick={() => setOpen(!open)}>Testimonials</Link>
                     </Lists>
                     <Lists>
-                        <Link>Testimonials</Link>
-                    </Lists>
-                    <Lists>
-                        <Link>Contact</Link>
+                        <Link href="#contact" onClick={() => setOpen(!open)}>Contact</Link>
                     </Lists>
                 </List>
             </Nav>

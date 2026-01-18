@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
-
+import { motion } from "framer-motion";
 export const ContactSection = styled.section`
     background: #f4f4f4;
     padding-top: 30px;
     color: #000;
-    padding: 1.5rem;
-
+    padding: 3rem 1.5rem;
+    overflow-x: hidden;
 `;
-export const Form = styled.form`
+export const Form = styled(motion.form)`
     display:flex;
     flex-direction:column;
     gap: 8px;
     width: 100%;
 `;
-export const Input = styled.input`
+export const Input = styled(motion.input)`
     width: 100%;
     height: 45px;
     padding: 0 12px;
@@ -27,7 +27,7 @@ export const Input = styled.input`
         border-color: #121212;
     }
 `;
-export const Textarea = styled.textarea`
+export const Textarea = styled(motion.textarea)`
     width: 100%;
     min-height: 120px;
     padding: 12px;

@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
+import { motion } from "framer-motion";
 export const Section = styled.section`
     padding: 1.5rem;
     margin: 5rem 0;
+    overflow-x: hidden;
 `;
-export const Box = styled.div`
+export const Box = styled(motion.div)`
     display:flex;
     flex-direction: column;
     gap:10px;
@@ -15,7 +17,7 @@ export const Box = styled.div`
         max-width: 100%;
     }
 `;
-export const Faq = styled.div`
+export const Faq = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;

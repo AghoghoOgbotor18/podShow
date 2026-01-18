@@ -1,12 +1,19 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
+import { motion } from "framer-motion";
 
 export const TestimonialSection = styled.section`
   margin: 4rem 1.5rem;
   text-align: center;
 `;
 
-export const TestimonialContainer = styled.div`
+export const Content = styled(motion.div)`
+  display:flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
+export const TestimonialContainer = styled(motion.div)`
   width: 100%;
   max-width: 950px;
   margin: 2rem auto;
@@ -28,12 +35,10 @@ export const TestimonialCards = styled.div`
 `;
 
 export const TestimonialCard = styled.div`
-  background: #ffffff;
+  background: #fdfdfdff;
   color: #121212;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.05),
-    0 2px 6px rgba(0, 0, 0, 0.03);
+  box-shadow: 3px 3px 5px #f5ededff;
   display: flex;
   flex-direction: column;
   gap: 12px;

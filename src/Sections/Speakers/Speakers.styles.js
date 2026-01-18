@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { devices } from "../../Styles/media"
+import { devices } from "../../Styles/media";
+import { motion } from "framer-motion";
 export const SpeakerSection = styled.section`
-    padding: 1rem;
+    padding: 4rem 1rem;
+    background: #f4f4f4;
 `;
 export const Content = styled.div`
     display:flex;
@@ -11,7 +13,7 @@ export const Content = styled.div`
 export const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2.5rem;
 
     @media ${devices.tablet} {
         grid-template-columns: repeat(2, 1fr);
@@ -21,7 +23,7 @@ export const Grid = styled.div`
         grid-template-columns: 1fr;
     }
 `;
-export const Card = styled.div`
+export const Card = styled(motion.div)`
     display:flex;
     flex-direction: column;
     gap: 4px;
@@ -47,7 +49,7 @@ export const Scale = styled.div`
     overflow: hidden;
     border-radius: 10px;
 `;
-export const Group = styled.div`
+export const Group = styled(motion.div)`
     display: flex;
     flex-direction: column;
     gap: 2px;

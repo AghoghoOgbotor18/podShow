@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
-export const TrendWrapper = styled.section`
+import { motion } from "framer-motion";
+export const TrendWrapper = styled(motion.section)`
     color: #131313;
     padding: 1rem;
-    margin-top: 9rem;
+    position: relative;
 `;
 export const TrendContent = styled.div`
     display:flex;
@@ -14,7 +15,7 @@ export const TrendContent = styled.div`
         align-items: center;
     }
 `;
-export const Cards = styled.div`
+export const Cards = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -26,7 +27,7 @@ export const Cards = styled.div`
         grid-template-columns: 1fr;
     }
 `;
-export const Card = styled.div`
+export const Card = styled(motion.div)`
     display: flex;
     flex-direction: column;
     gap:5px;
@@ -40,7 +41,7 @@ export const Card = styled.div`
         transform: translateY(-5px);
     }
 `;
-export const SectionTitle = styled.h1`
+export const SectionTitle = styled(motion.h1)`
     font-weight: bold;
     margin-bottom: 15px;
 `;

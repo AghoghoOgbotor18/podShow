@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { 
-  Identity, Image, Name, Names, Role, TestimonialCard, TestimonialCards, TestimonialContainer, TestimonialSection, Dots, Dot
+  Identity, Image, Name, Names, Role, TestimonialCard, TestimonialCards, TestimonialContainer, TestimonialSection, Dots, Dot, Content
 } from './Testimonials.styles';
 import { Subtitle, Text, Title } from '../About/About.styles';
 import firstPerson from "../../assets/Images/passprt1.jpg";
@@ -139,52 +139,80 @@ const Testimonials = () => {
     const startIndex = currentSlide * cardPerSlide;
     const visibleTestimonials = testimonials.slice(startIndex, startIndex + cardPerSlide);
 
+    const container = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.3,
+                duration: 2
+            }
+        }
+    };
+
+    const show = {
+        hidden: {opacity:0},
+        visible: {
+            opacity:1,
+            transition: {
+                staggerChildren: 0.3,
+                duration: 2
+            }
+        }
+    };
+
+    const items = {
+        hidden: {opacity: 0, y: 10},
+        visible: {opacity: 1, y: 0},
+    };
+
     return (
-        <TestimonialSection>
-            <Title>What Women Say About Us</Title>
-            <Subtitle>
-                Shine Bright, Speak Loud:<br />
-                Testimonials Take Flight
-            </Subtitle>
+        <TestimonialSection id="testimonials">
+            <Content variants={container} initial="hidden" whileInView="visible" viewport={{once: true}}>
+                <Title variants={items}>What Women Say About Us</Title>
+                <Subtitle variants={items}>
+                    Shine Bright, Speak Loud:<br />
+                    Testimonials Take Flight
+                </Subtitle>
 
-            <Text>
-                Real voices. Real stories. Here's how PodShow is impacting lives
-                through honest conversations and shared experiences.
-            </Text>
+                <Text variants={items}>
+                    Real voices. Real stories. Here's how PodShow is impacting lives
+                    through honest conversations and shared experiences.
+                </Text>
 
-            <TestimonialContainer>
-                <TestimonialCards
-                style={{
-                    transform: `translateX(-${
-                    currentSlide * (320 * cardPerSlide)
-                    }px)`,
-                }}
-                >
-                {testimonials.map((item) => (
-                    <TestimonialCard key={item.id}>
-                    <Text>{item.message}</Text>
-                    <Identity>
-                        <Image src={item.image} alt={item.name} />
-                        <Names>
-                        <Name>{item.name}</Name>
-                        <Role>{item.role}</Role>
-                        </Names>
-                    </Identity>
-                    </TestimonialCard>
-                ))}
-                </TestimonialCards>
-            </TestimonialContainer>
+                <TestimonialContainer variants={items}>
+                    <TestimonialCards
+                    style={{
+                        transform: `translateX(-${
+                        currentSlide * (320 * cardPerSlide)
+                        }px)`,
+                    }}
+                    >
+                    {testimonials.map((item) => (
+                        <TestimonialCard key={item.id}>
+                        <Text>{item.message}</Text>
+                        <Identity>
+                            <Image src={item.image} alt={item.name} />
+                            <Names>
+                            <Name>{item.name}</Name>
+                            <Role>{item.role}</Role>
+                            </Names>
+                        </Identity>
+                        </TestimonialCard>
+                    ))}
+                    </TestimonialCards>
+                </TestimonialContainer>
 
-            {/* ---- DOTS ---- */}
-            <Dots>
-                {Array.from({ length: totalSlides }).map((_, index) => (
-                <Dot
-                    key={index}
-                    active={index === currentSlide}
-                    onClick={() => setCurrentSlide(index)}
-                />
-                ))}
-            </Dots>
+                {/* ---- DOTS ---- */}
+                <Dots variants={items}>
+                    {Array.from({ length: totalSlides }).map((_, index) => (
+                    <Dot
+                        key={index}
+                        active={index === currentSlide}
+                        onClick={() => setCurrentSlide(index)}
+                    />
+                    ))}
+                </Dots>
+            </Content>
         </TestimonialSection>
 
     )

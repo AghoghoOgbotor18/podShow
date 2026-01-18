@@ -11,5 +11,9 @@ const GlobalStyles = createGlobalStyle`
         background-color:white;
         color:#111;
     }
+    html{
+        scroll-behavior: smooth;
+        scroll-padding-top: 4rem;   
+    }
 `;
 export default GlobalStyles;

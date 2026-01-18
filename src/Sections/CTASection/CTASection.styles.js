@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../Styles/media";
-export const Section = styled.section`
+import {motion} from "framer-motion"
+export const Section = styled(motion.section)`
     color: #fff;
     padding: 15px 20px;
     margin: 5rem auto;
@@ -10,7 +11,7 @@ export const Section = styled.section`
         margin: 5rem 1rem;
     }
 `;
-export const Content = styled.div`
+export const Content = styled(motion.div)`
     display: flex;
     justify-content: center;
     gap: 3rem;
@@ -28,12 +29,12 @@ export const Content = styled.div`
 
     }
 `;
-export const Form = styled.form`
+export const Form = styled(motion.form)`
     display:flex;
     align-items: center;
     
 `;
-export const Input = styled.input`
+export const Input = styled(motion.input)`
     border: 1px solid #e9e4e4ff;
     border-radius: 5px;
     background: transparent;
@@ -43,7 +44,7 @@ export const Input = styled.input`
     max-width: 450px;
     font-size: 15px;
 `;
-export const Image = styled.img`
+export const Image = styled(motion.img)`
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -52,7 +53,7 @@ export const Image = styled.img`
         margin-top: 2rem;
     }
 `;
-export const Button = styled.button`
+export const Button = styled(motion.button)`
     background: #f6f9fe;
     color: black;
     border-radius: 0 5px 5px 0;
@@ -76,7 +77,7 @@ export const Subtitle = styled.h2`
     }
 
 `;
-export const Card = styled.div`
+export const Card = styled(motion.div)`
     display:flex;
     flex-direction: column;
     gap: 1.2rem;

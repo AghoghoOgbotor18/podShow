@@ -9,6 +9,8 @@ import WhyChooseUs from './Sections/WhyChooseUs/WhyChooseUs';
 import Testimonials from './Sections/Testimonials/Testimonials';
 import Contact from './Sections/Contact/Contact';
 import Footer from './Components/Layout/Footer/Footer';
+import FloatingContainer from './Components/FloatingContainer/FloatingContainer';
+
 
 const App = () => {
   const [input, setInput] = useState("");
@@ -19,6 +21,7 @@ const App = () => {
       </header>
       <main>
         <Hero />
+        <FloatingContainer />
         <Trending />
         <About />
         <Speakers />

@@ -31,23 +31,52 @@ const WhyChooseUs = () => {
             answer: "Yes! We love amplifying women's voices. You can apply through our contact page to be featured on an episode."
         }
     ]
+
+    const boxVariant ={
+        hidden: {opacity: 0, x: -20},
+        visible: {opacity: 1, x: 0,
+            transition: {
+                duration: 2,
+                staggerChildren: 0.3
+            }
+        }
+    };
+
+    const container = {
+        hidden: {opacity: 0, x: 20},
+        visible: {opacity: 1, x: 0,
+            transition: {
+                duration: 2,
+                staggerChildren: 0.2
+            },
+        }
+    }
+
+    const items = {
+        hidden: {opacity: 0, x: -20},
+        visible: {opacity: 1, x: 0}
+    }
+    const item = {
+        hidden: {opacity: 0, x: 20},
+        visible: {opacity: 1, x: 0}
+    }
     return (
         <Section>
-            <Content>
-                <Box>
-                    <Title>Why Choose us?</Title>
-                    <Subtitle>A podcast that listens, uplifts, and amplifies women's voices</Subtitle>
-                    <Text>
+            <Content  variants={boxVariant} initial="hidden" whileInView="visible" viewport= {{once: true}}>
+                <Box variants={boxVariant} initial="hidden" animate="visible">
+                    <Title variants={items}>Why Choose us?</Title>
+                    <Subtitle variants={items}>A podcast that listens, uplifts, and amplifies women's voices</Subtitle>
+                    <Text variants={items}>
                         PodShow is more than a podcast — it's a space where women feel heard, seen, and understood. We create honest conversations that reflect real experiences, real struggles, and real growth.
 
                         Every episode is designed to inspire confidence, spark meaningful conversations, and remind women that their stories matter. Whether it's career growth, mental wellness, relationships, or self-discovery, PodShow delivers content that speaks directly to women navigating life in all its complexity.
                     </Text>
                 </Box>
-                <Features>
+                <Features variants={container} initial="hidden" animate="visible">
                     <Image src={women} alt="two women talking" />
-                    <Box>
+                    <Box variants={container} initial="hidden" animate="visible">
                         {faq.map((item, index) => (
-                            <Faq key={index}>
+                            <Faq key={index} variants={items}>
                                 <Faqs onClick ={() => toggleFAQ(index)}>
                                     <Question>{item.question}</Question>
                                     {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}

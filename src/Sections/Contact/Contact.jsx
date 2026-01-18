@@ -15,49 +15,80 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
     }
+
+
+    const boxVariant ={
+        hidden: {opacity: 0, x: -20},
+        visible: {opacity: 1, x: 0,
+            transition: {
+                duration: 2,
+                staggerChildren: 0.3
+            }
+        }
+    };
+
+    const container = {
+        hidden: {opacity: 0, x: 20},
+        visible: {opacity: 1, x: 0,
+            transition: {
+                duration: 2,
+                staggerChildren: 0.2
+            },
+        }
+    }
+
+    const items = {
+        hidden: {opacity: 0, x: -20},
+        visible: {opacity: 1, x: 0}
+    }
+    const item = {
+        hidden: {opacity: 0, x: 20},
+        visible: {opacity: 1, x: 0}
+    }
+
     return (
         <ContactSection>
-            <Content>
-                <Box>
-                    <Subtitle>Get In Touch</Subtitle>
-                    <Text>Reach out to us in any of our platform, send mails and ask as many question as possible</Text>
+            <Content variants={boxVariant} initial="hidden" whileInView="visible" viewport= {{once: true, amount: 0.2}}>
+                <Box variants={boxVariant} initial="hidden" animate="visible">
+                    <Subtitle variants={items}>Get In Touch</Subtitle>
+                    <Text variants={items}>Reach out to us in any of our platform, send mails and ask as many question as possible</Text>
                     <Info>
-                        <Brands>
+                        <Brands variants={item}>
                             <FaLocationArrow />
                             <Text>Our Location</Text>
                         </Brands>
-                        <Text>22. Dedevwo Road, Delta State, Nigeria</Text>
+                        <Text variants={item}>22. Dedevwo Road, Delta State, Nigeria</Text>
                     </Info>
                     <Info>
-                        <Brands>
+                        <Brands variants={item}>
                             <FaUser />
                             <Text>Contact Us</Text>
                         </Brands>
-                        <Text>+2348026930078</Text>
+                        <Text variants={item}>+2348026930078</Text>
                     </Info>
                     <Info>
-                        <Brands>
+                        <Brands variants={item}>
                             <FaMailBulk />
                             <Text>Email</Text>
                         </Brands>
-                        <Text>aghoghoogbotor@gmail.com</Text>
+                        <Text variants={item}>aghoghoogbotor@gmail.com</Text>
                     </Info>
                 </Box>
-                <Features>
+                <Features variants={container} initial="hidden" animate="visible" >
                     <Image src={people} alt="people talking" />
-                    <Box>
-                        <Subtitle>Get In Touch</Subtitle>
-                        <Form onSubmit={handleSubmit}>
-                            <Inputs>
+                    <Box variants={container} initial="hidden" animate="visible">
+                        <Subtitle variants={items}>Get In Touch</Subtitle>
+                        <Form onSubmit={handleSubmit} variants={container} initial="hidden" animate="visible">
+                            <Inputs variants={items}>
                                 <Input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First Name"/>
                                 <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name"/>
                             </Inputs>
-                            <Inputs>
+                            <Inputs variants={items}>
                                 <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
                                 <Input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Subject"/>
                             </Inputs>
-                            <Textarea value={textarea} onChange={(e) => setTextarea(e.target.value)}placeholder="Message...." />
-                            <CTAButton>Send Message</CTAButton>
+                            <Textarea value={textarea} onChange={(e) => setTextarea(e.target.value)}placeholder="Message...." variants={items}/>
+                            <CTAButton variants={items}>Send Message</CTAButton>
                         </Form>
                     </Box>
                 </Features>
