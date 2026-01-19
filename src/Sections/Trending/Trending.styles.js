@@ -51,7 +51,6 @@ export const TrendImage = styled.img`
     height: 200px;
     object-fit:cover;
     border-radius: 10px;
-    background: #eaeaea;
 `;
 export const TrendTitle = styled.h3`
     font-weight: 700;
