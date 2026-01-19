@@ -1,93 +1,131 @@
-# 🎙️ PodShow – Styled Components Practice Project
+# 🎧 Podcast Landing Page (Styled Components Practice)
 
 ## 🌐 Live Demo
 🔗 **https://podshow.vercel.app**
 
----
 
-## 📌 Project Overview
-**PodShow** is a responsive podcast landing page built with **React** and **styled-components**.  
-The project was created to practice **component-based styling**, responsive layouts, and modern UI patterns using styled-components in a real-world scenario.
+This project is a **modern podcast landing page** built with **React + Vite**, created primarily to **practice and deepen my understanding of Styled Components**, animations, and frontend performance optimization.
 
-The interface is inspired by podcast and media platforms, with a strong focus on clean visuals, reusable components, and smooth user interactions.
+Beyond styling, this project also explores **real-world UI concerns** such as image performance, preloading, lazy loading, layout stability, and smooth animations.
 
 ---
 
-## 🎯 Purpose of the Project
+## 🚀 Tech Stack
+
+- **React (Vite)**
+- **Styled Components**
+- **Framer Motion** (animations)
+- **React Icons**
+- **Modern CSS practices**
+- **Optimized assets (WebP, JPG)**
+
+---
+
+## 🎯 Project Goals
+
 This project was built to:
 
-- Practice **styled-components** in a real-world UI use case  
-- Understand **component-scoped styling** and style composition  
-- Build responsive layouts without traditional CSS files  
-- Improve React component structure and reusability  
-- Experiment with animations, transitions, and hover effects  
-- Strengthen frontend architecture and design consistency  
+- Practice **Styled Components architecture**
+- Work with **animated UI elements**
+- Handle **hero image sliders**
+- Improve **image performance**
+- Understand **preloading vs lazy loading**
+- Prevent layout shifts and flickering
+- Build a clean, reusable component structure
 
 ---
 
-## 🛠️ Built With
-- **React**
-- **Styled-Components**
-- **Framer Motion**
-- **React Icons**
-- **JavaScript (ES6+)**
-- **Vite**
+## ✨ Features
+
+### 🖼️ Hero Section
+- Animated background image slider
+- Smooth fade transitions using **Framer Motion**
+- Images preloaded for better performance
+- No lazy loading (hero is above-the-fold)
+- Text and CTA animated with staggered effects
+
+### 🔥 Trending Section
+- Image-based content cards
+- Animations applied to containers instead of images
+- Fixed container sizes to prevent layout shift
+- Lazy loading disabled to avoid flickering
+- Optimized image formats
+
+### 🎈 Floating Component
+- Separate reusable component
+- Visually connects the hero and trending sections
+- Positioned carefully to feel part of both sections
+- Maintains clean component separation
+
+### 🎨 Styling
+- Fully styled using **Styled Components**
+- No global CSS dependencies
+- Component-scoped styles
+- Reusable styled elements
+- Clean design system structure
 
 ---
 
-## ✨ Features Implemented
-- Responsive **Navbar**
-- Hero section with animated background
-- About section
-- “Why Choose Us” section featuring:
-  - Image-centered layout
-  - Accordion-style FAQ
-- Testimonial section with:
-  - Auto-sliding testimonial cards
-  - Responsive card display (desktop, tablet, mobile)
-  - Smooth slide-in animations
-  - Pagination dots
-- Trending episodes section
-- Call-to-Action (CTA) subscription section
-- Contact section
-- Fully responsive layout across all screen sizes
+## ⚡ Performance Optimizations
+
+This project intentionally focuses on **frontend performance best practices**:
+
+### Image Optimization
+- Converted images to **WebP where beneficial**
+- Kept JPG where WebP increased file size
+- Used correct image formats based on content
+
+### Loading Strategy
+- **Hero images**
+  - Moved to `/public`
+  - Preloaded via `index.html`
+  - Loaded eagerly
+- **Trending images**
+  - Not lazy loaded (above-the-fold)
+  - Fixed container dimensions
+- **Below-the-fold images**
+  - Lazy loading enabled where appropriate
+
+### Flicker & Layout Shift Fixes
+- Removed lazy loading from animated images
+- Reserved layout space using fixed heights
+- Animated wrappers instead of `<img>` tags
+- Avoided unnecessary re-renders
 
 ---
 
-## 📱 Responsiveness
-The application adapts seamlessly across:
-- Desktop
-- Tablet
-- Mobile devices  
+## 📂 Project Structure
 
-Media queries are handled directly within **styled-components**, keeping styles modular and maintainable.
+```txt
+src/
+│── components/
+│   ├── Hero/
+│   ├── Trending/
+│   ├── Floating/
+│   └── common/
+│
+│── styles/
+│
+public/
+│── images/
+│   ├── hero-bg.jpg
+│   ├── women3.jpg
+│   └── women4.jpg
+│
+index.html
 
----
-
-## 🎨 Styling Approach
-- All styles are written using **styled-components**
-- No external CSS or SCSS files
-- Styles are scoped per component
-- Uses transient props (`$prop`) to prevent DOM warnings
-- Emphasis on spacing, typography hierarchy, and subtle UI animations
-
----
-
-## ⚡ Performance
-Performance optimization is **not yet finalized**.
-
-Planned optimizations include:
-- Image optimization and lazy loading
-- Bundle size reduction
-- Lighthouse performance improvements
+```
 
 ---
 
-## 🚀 Getting Started
+# Clone the repo
+git clone https://github.com/your-username/project-name.git
 
-### Clone the repository
-```bash
-git clone https://github.com/your-username/podshow.git
-cd podshow
+# Install dependencies
 npm install
+
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
