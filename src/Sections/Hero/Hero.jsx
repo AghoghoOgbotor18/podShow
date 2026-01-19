@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { HeroWrapper, Content, Title,Subtitle, Button, Slide } from './Hero.styles';
 import { FaChevronRight } from 'react-icons/fa';
-import heroBg1 from "../../assets/Images/hero-bg.jpg";
-import heroBg2 from "../../assets/Images/women3.jpg";
-import heroBg3 from "../../assets/Images/women4.jpg";
 import {motion, AnimatePresence} from "framer-motion";
 
 const Hero = () => {
 
-    const slides =[heroBg1, heroBg2, heroBg3];
+    const slides = [ "/images/hero-bg.jpg", "/images/women3.jpg", "/images/women4.jpg" ];
+
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
@@ -17,7 +15,7 @@ const Hero = () => {
         }, 4000);
 
         return () => clearInterval(interval);
-    })
+    }, [slides.length])
 
 
     const container = {

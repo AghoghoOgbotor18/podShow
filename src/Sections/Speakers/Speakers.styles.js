@@ -36,6 +36,7 @@ export const Image = styled.img`
     height:300px;
     border-radius: 10px;
     transition: 1s;
+    background: #eaeaea;
 
     &:hover{
         scale: 1.02;
