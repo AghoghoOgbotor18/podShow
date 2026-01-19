@@ -1,38 +1,45 @@
 # 🎙️ PodShow – Styled Components Practice Project
 
-## 📌 Project Description
-**PodShow** is a responsive podcast landing page built with **React** and **styled-components**.  
-This project was created primarily to practice **component-based styling**, responsive layouts, and modern UI patterns using styled-components.
+## 🌐 Live Demo
+🔗 **https://podshow.vercel.app**
 
-The design focuses on clean visuals, reusable components, and smooth user interactions, inspired by real-world podcast and media platforms.
+---
+
+## 📌 Project Overview
+**PodShow** is a responsive podcast landing page built with **React** and **styled-components**.  
+The project was created to practice **component-based styling**, responsive layouts, and modern UI patterns using styled-components in a real-world scenario.
+
+The interface is inspired by podcast and media platforms, with a strong focus on clean visuals, reusable components, and smooth user interactions.
 
 ---
 
 ## 🎯 Purpose of the Project
 This project was built to:
 
-- Practice **styled-components** in a real-world UI scenario  
-- Understand **component-scoped styling**
-- Implement **responsive layouts** without traditional CSS files
-- Improve React component structure and reusability
-- Practice animations, transitions, and hover effects
-- Strengthen frontend development skills
+- Practice **styled-components** in a real-world UI use case  
+- Understand **component-scoped styling** and style composition  
+- Build responsive layouts without traditional CSS files  
+- Improve React component structure and reusability  
+- Experiment with animations, transitions, and hover effects  
+- Strengthen frontend architecture and design consistency  
 
 ---
 
 ## 🛠️ Built With
 - **React**
 - **Styled-Components**
+- **Framer Motion**
 - **React Icons**
 - **JavaScript (ES6+)**
+- **Vite**
 
 ---
 
 ## ✨ Features Implemented
 - Responsive **Navbar**
-- Hero section
+- Hero section with animated background
 - About section
-- “Why Choose Us” section with:
+- “Why Choose Us” section featuring:
   - Image-centered layout
   - Accordion-style FAQ
 - Testimonial section with:
@@ -40,8 +47,10 @@ This project was built to:
   - Responsive card display (desktop, tablet, mobile)
   - Smooth slide-in animations
   - Pagination dots
+- Trending episodes section
 - Call-to-Action (CTA) subscription section
-- Fully responsive design
+- Contact section
+- Fully responsive layout across all screen sizes
 
 ---
 
@@ -51,7 +60,7 @@ The application adapts seamlessly across:
 - Tablet
 - Mobile devices  
 
-Media queries are handled directly within styled-components for cleaner and more maintainable styling.
+Media queries are handled directly within **styled-components**, keeping styles modular and maintainable.
 
 ---
 
@@ -59,20 +68,18 @@ Media queries are handled directly within styled-components for cleaner and more
 - All styles are written using **styled-components**
 - No external CSS or SCSS files
 - Styles are scoped per component
-- Uses transient props (`$prop`) to avoid DOM warnings
-- Emphasis on clean spacing, readability, and subtle animations
+- Uses transient props (`$prop`) to prevent DOM warnings
+- Emphasis on spacing, typography hierarchy, and subtle UI animations
 
 ---
 
-## 🚧 Project Status
-🟡 **In Progress**
+## ⚡ Performance
+Performance optimization is **not yet finalized**.
 
-Planned improvements:
-- Add scroll-based animations
-- Improve accessibility (ARIA support)
-- Add light/dark theme toggle
-- Connect CTA form to a backend service
-- Refactor components for scalability
+Planned optimizations include:
+- Image optimization and lazy loading
+- Bundle size reduction
+- Lighthouse performance improvements
 
 ---
 
@@ -81,5 +88,6 @@ Planned improvements:
 ### Clone the repository
 ```bash
 git clone https://github.com/your-username/podshow.git
+cd podshow
 npm install
-npm start
+npm run dev
