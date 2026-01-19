@@ -47,7 +47,7 @@ const Contact = () => {
     }
 
     return (
-        <ContactSection>
+        <ContactSection id="contact">
             <Content variants={boxVariant} initial="hidden" whileInView="visible" viewport= {{once: true, amount: 0.2}}>
                 <Box variants={boxVariant} initial="hidden" animate="visible">
                     <Subtitle variants={items}>Get In Touch</Subtitle>

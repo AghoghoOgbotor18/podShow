@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import Header from './Components/Layout/Header/Header';
 import Hero from './Sections/Hero/Hero';
-import Trending from "./Sections/Trending/Trending";
-import About from "./Sections/About/About";
-import Speakers from './Sections/Speakers/Speakers';
-import CTASection from './Sections/CTASection/CTASection';
-import WhyChooseUs from './Sections/WhyChooseUs/WhyChooseUs';
-import Testimonials from './Sections/Testimonials/Testimonials';
-import Contact from './Sections/Contact/Contact';
-import Footer from './Components/Layout/Footer/Footer';
+const Trending = React.lazy(() => import("./Sections/Trending/Trending"));
+const About = React.lazy(() => import("./Sections/About/About"));
+const Speakers = React.lazy(() => import('./Sections/Speakers/Speakers'));
+const CTASection = React.lazy(() => import('./Sections/CTASection/CTASection'));
+const WhyChooseUs = React.lazy(() => import('./Sections/WhyChooseUs/WhyChooseUs'));
+const Testimonials = React.lazy(() => import('./Sections/Testimonials/Testimonials'));
+const Contact = React.lazy(() => import('./Sections/Contact/Contact'));
+const Footer = React.lazy(() => import('./Components/Layout/Footer/Footer'));
 import FloatingContainer from './Components/FloatingContainer/FloatingContainer';
 
 
@@ -22,16 +22,20 @@ const App = () => {
       <main>
         <Hero />
         <FloatingContainer />
-        <Trending />
-        <About />
-        <Speakers />
-        <CTASection />
-        <WhyChooseUs />
-        <Testimonials />
-        <Contact />
+        <Suspense fallback={<p>Loading...</p>}>
+          <Trending />
+          <About />
+          <Speakers />
+          <CTASection />
+          <WhyChooseUs />
+          <Testimonials />
+          <Contact />
+        </Suspense>
       </main>
       <footer>
-        <Footer />
+        <Suspense fallback={<p>Loading....</p>}>
+          <Footer />
+        </Suspense>
       </footer>
     </>
   )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Section, Content, Form, Image, Input, Button, Subtitle, Card } from './CTASection.styles';
-import mic from "../../assets/Images/mic.png";
+import mic from "../../assets/Images/mics.webp";
 import { Text } from '../About/About.styles';
 
 const CTASection = () => {

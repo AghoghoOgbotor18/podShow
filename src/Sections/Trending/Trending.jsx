@@ -59,7 +59,7 @@ const Trending = () => {
           <Cards>
             {episodes.map((card,id) => (
               <Card key={id} variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-                <TrendImage src={card.image} alt={card.title} />
+                <TrendImage src={card.image} alt={card.title} loading='lazy' />
                 <TrendTitle>{card.title}</TrendTitle>
                 <TrendText>{card.desc}</TrendText>
                 <TrendButton>Watch Now<FiArrowUpRight size={15} /></TrendButton>

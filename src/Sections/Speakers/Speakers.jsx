@@ -46,7 +46,7 @@ const Speakers = () => {
                     {speakers.map((speaker, id) => (
                         <Card key={id} variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
                             <Scale>
-                                <Image src={speaker.image} alt="women talking" />
+                                <Image src={speaker.image} alt="women talking" loading='lazy'/>
                             </Scale>
                             <Title>{speaker.name}</Title>
                             <Text>{speaker.desc}</Text>

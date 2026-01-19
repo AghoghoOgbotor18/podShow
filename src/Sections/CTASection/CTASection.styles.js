@@ -14,6 +14,7 @@ export const Section = styled(motion.section)`
 export const Content = styled(motion.div)`
     display: flex;
     justify-content: center;
+    align-items:center;
     gap: 3rem;
     background-color: #121212;
     border-radius: 10px;

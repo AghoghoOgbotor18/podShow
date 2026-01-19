@@ -1,9 +1,9 @@
 import React from "react";
 import { FloatingWrapper, Icons, Image, Text } from "./FloatingContainer.styles";
-import spotify from "../../assets/Images/spotify.png";
-import youtube from "../../assets/Images/youtube.png";
-import tiktok from "../../assets/Images/tiktok.png";
-import apple from "../../assets/Images/apple.png";
+import spotify from "../../assets/Images/spotify.webp";
+import youtube from "../../assets/Images/youtube.webp";
+import tiktok from "../../assets/Images/tiktok.webp";
+import apple from "../../assets/Images/apple.webp";
 import { motion } from "framer-motion";
 
 const FloatingContainer = () => {
